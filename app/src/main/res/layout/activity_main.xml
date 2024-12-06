@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pista"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/caixaLogin"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_marginHorizontal="1dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/caixa_login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Bem Vindo!"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/caixaLogin"
+        app:layout_constraintStart_toStartOf="@id/caixaLogin"
+        app:layout_constraintTop_toTopOf="@id/caixaLogin" />
+
+    <TextView
+        android:id="@+id/voltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/baseline_arrow_back_ios_new_24"
+        android:text="Voltar"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:ignore="MissingConstraints" />
+
+
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/caixa_edit_text_login"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="@id/caixaLogin"
+        app:layout_constraintStart_toStartOf="@id/caixaLogin"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle" />
+
+    <EditText
+        android:id="@+id/editSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/caixa_edit_text_login"
+        android:hint="Senha"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:padding="15dp"
+        android:drawableRight="@drawable/ic_olho"
+        app:layout_constraintEnd_toEndOf="@id/caixaLogin"
+        app:layout_constraintStart_toStartOf="@id/caixaLogin"
+        app:layout_constraintTop_toBottomOf="@id/editEmail" />
+
+    <TextView
+        android:id="@+id/esqueceuasenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="8dp"
+        android:text="Esqueceu a Senha?"
+        android:textColor="@color/DeepSkyBlue"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/caixaLogin"
+        app:layout_constraintStart_toStartOf="@id/caixaLogin"
+        app:layout_constraintTop_toBottomOf="@id/editSenha" />
+
+
+    <Button
+        android:id="@+id/btEntrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:backgroundTint="@color/DeepSkyBlue"
+        android:padding="15dp"
+        android:text="Entrar"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/caixaLogin"
+        app:layout_constraintEnd_toEndOf="@id/caixaLogin"
+        app:layout_constraintStart_toStartOf="@id/caixaLogin"
+        app:layout_constraintTop_toBottomOf="@id/esqueceuasenha"
+        app:layout_constraintVertical_bias="0.042" />
+
+    <TextView
+        android:id="@+id/naotenhoUmaconta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Não possui uma conta?"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="@id/caixaLogin"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintStart_toStartOf="@id/caixaLogin"
+        app:layout_constraintTop_toBottomOf="@id/btEntrar"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/CadastrarSe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="34dp"
+        android:text="Cadastre-se"
+        android:onClick="IrParaCadastro"
+        android:textColor="@color/DeepSkyBlue"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/caixaLogin"
+        app:layout_constraintHorizontal_bias="0.778"
+        app:layout_constraintStart_toStartOf="@id/caixaLogin"
+        app:layout_constraintTop_toBottomOf="@id/btEntrar"
+        tools:ignore="OnClick" />
+
+    <ProgressBar
+        android:id="@+id/circulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/CadastrarSe"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="invisible"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pista"
+    tools:context=".OldCarCadastro">
+
+    <View
+        android:id="@+id/caixaLogin"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_marginHorizontal="1dp"
+        android:layout_marginTop="220dp"
+        android:background="@drawable/caixa_login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/txtCadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Cadastro"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/caixaLogin"
+        app:layout_constraintStart_toStartOf="@id/caixaLogin"
+        app:layout_constraintTop_toTopOf="@id/caixaLogin" />
+
+
+    <TextView
+        android:id="@+id/voltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/baseline_arrow_back_ios_new_24"
+        android:text="Voltar"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+
+    <EditText
+        android:id="@+id/editUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/caixa_edit_text_login"
+        android:hint="Usuario"
+        android:inputType="text"
+        android:maxLines="1"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="@id/caixaLogin"
+        app:layout_constraintStart_toStartOf="@id/caixaLogin"
+        app:layout_constraintTop_toBottomOf="@id/txtCadastro" />
+
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/caixa_edit_text_login"
+        android:hint="Email"
+        android:inputType="text"
+        android:maxLines="1"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="@id/caixaLogin"
+        app:layout_constraintStart_toStartOf="@id/caixaLogin"
+        app:layout_constraintTop_toBottomOf="@id/editUsuario" />
+
+    <EditText
+        android:id="@+id/editSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/caixa_edit_text_login"
+        android:hint="Senha"
+        android:inputType="text"
+        android:maxLines="1"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="@id/caixaLogin"
+        app:layout_constraintStart_toStartOf="@id/caixaLogin"
+        app:layout_constraintTop_toBottomOf="@id/editEmail" />
+
+    <TextView
+       android:id="@+id/agreeBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/box_selector"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="Eu concordo com os termos de"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.208"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editSenha" />
+
+    <TextView
+        android:id="@+id/Dadospessoais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Dados pessoais"
+        android:textColor="@color/DeepSkyBlue"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.86"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editSenha" />
+
+    <Button
+        android:id="@+id/Criar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:backgroundTint="@color/DeepSkyBlue"
+        android:padding="15dp"
+        android:text="Criar"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/caixaLogin"
+        app:layout_constraintEnd_toEndOf="@id/caixaLogin"
+        app:layout_constraintStart_toStartOf="@id/caixaLogin"
+        app:layout_constraintTop_toBottomOf="@+id/Dadospessoais"
+        app:layout_constraintVertical_bias="0.124" />
+
+    <TextView
+        android:id="@+id/jaPossuiCadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Já possui um Cadastro?"
+        app:layout_constraintTop_toBottomOf="@+id/Criar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.43" />
+
+
+    <TextView
+        android:id="@+id/EntrarDeCadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Entrar"
+        android:textColor="@color/DeepSkyBlue"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.738"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Criar"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/mensagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:textSize="14sp"
+        android:textColor="@color/Green"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/Criar"
+        app:layout_constraintEnd_toEndOf="@id/caixaLogin"
+        app:layout_constraintStart_toStartOf="@id/caixaLogin" />
+
+    <ProgressBar
+        android:id="@+id/Circulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/EntrarDeCadastro"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="invisible"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

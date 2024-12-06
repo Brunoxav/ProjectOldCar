@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Estado selecionado (caixa marcada) -->
+    <item android:drawable="@drawable/baseline_check_box_24" android:state_selected="true" />
+
+    <!-- Estado padrão (caixa desmarcada) -->
+    <item android:drawable="@drawable/box" />
+</selector>
